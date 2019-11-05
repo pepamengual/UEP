@@ -5,7 +5,7 @@
     glob
     multiprocessing.Pool
     os
-    pickle
+    compress_pickle
 
 """
 
