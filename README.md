@@ -12,7 +12,7 @@ UEP moves appart from the state-of-the art and it is trained on interactome data
 
 ### UEP algorithm
 
-![UEP algorithm](images/uep_algorithm.png)
+![UEP algorithm](images/uep_algorithm.png | width = 100)
 
 
 
