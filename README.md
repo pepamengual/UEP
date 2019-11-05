@@ -6,12 +6,12 @@ UEP is a tool for predicting the impact of mutations in a protein-protein comple
 
 ### UEP dependencies
 
-- [prody](https://github.com/prody/ProDy)
-- [itertools](https://docs.python.org/3/library/itertools.html)
-- [glob](https://docs.python.org/3/library/glob.html)
-- [os](https://docs.python.org/3/library/os.html)
-- [multiprocessing](https://docs.python.org/3/library/multiprocessing.html)
-- [compress_pickle](https://pypi.org/project/compress-pickle/)
+- [prody](https://github.com/prody/ProDy) - three-dimensional searches
+- [itertools](https://docs.python.org/3/library/itertools.html) - combinatorial calculations
+- [glob](https://docs.python.org/3/library/glob.html) - pathing files
+- [os](https://docs.python.org/3/library/os.html) - pathing files
+- [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - multiprocessing to speed up training and scoring
+- [compress_pickle](https://pypi.org/project/compress-pickle/) - saving trained data into a compressed pickle
 
 
 ### What makes UEP different from the state-of-the art?
