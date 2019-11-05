@@ -13,6 +13,7 @@ from predictor.core import training
 from predictor.general import pickle_saver
 from predictor.general import pickle_reader
 from predictor.core import scoring
+from predictor.general import results_saver
 
 radius = 4
 number_of_processors = 27
@@ -30,9 +31,8 @@ def main(radius, number_of_processors, path_training_folders):
     path_skempi_models = "/home/pepamengual/UEP/skempi/foldx_wildtype_models/WT_*"
     skempi_predictions = scoring.scoring_with_multiprocessing(radius, number_of_processors, training_data, path_skempi_models)
     
-    for name, ratio in sorted(skempi_predictions.items()):
-        print(name, ratio)
-    
+    uep_results_file = "skempi/uep_predictions.txt"
+    results_saver.saving_file(skempi_predictions, uep_results_file)
 
 if __name__ == "__main__":
     main(radius, number_of_processors, path_training_folders)
