@@ -1,8 +1,9 @@
 # UEP
 
 ### Welcome to UEP!
-
+<p style="text-align: center;">
 UEP is a tool for predicting the impact of mutations in a protein-protein complex. As you may know, mutations may reshape the binding affinity of a Protein-Protein interaction (PPI), and predicting its effects is of great interest in diverse disciplines, such as biotechnology or molecular interpretation of pathological mutations.
+</p>
 
 ### UEP dependencies
 
