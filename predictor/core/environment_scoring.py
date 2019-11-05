@@ -31,7 +31,7 @@ def score_skempi(training_data, skempi_pdb_file, radius):
             contact_count_original_residue += training_data[environment_of_mutation][target_original_residue]
             contact_count_mutant_residue += training_data[environment_of_mutation][target_mutant_residue]
     name = "{}_{}".format(pdb_code, resume_mutation)
-    ratio = round(contact_count_mutant_residue/contact_count_original_residue)
+    ratio = round(contact_count_mutant_residue/contact_count_original_residue, 2)
     return name, ratio
 
 def define_mutation(skempi_pdb_file):
