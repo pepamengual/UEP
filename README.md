@@ -8,7 +8,13 @@ UEP is a tool for predicting the impact of mutations in a protein-protein comple
 
 Current state-of-the art methods for predicting the impact of mutations in a protein-protein rely on the description of physical energies, statistical potentials, conservation, shape complementarity, and more recently, machine learning-based approaches.
 
-UEP moves appart from the state-of-the art and it is trained on interactome data, concretely on Interactome3D (https://interactome3d.irbbarcelona.org/)
+UEP moves appart from the state-of-the art and it is trained on interactome data, concretely on Interactome3D (https://interactome3d.irbbarcelona.org/).
+
+### UEP algorithm
+
+![UEP algorithm](images/uep_algorithm.png)
+
+
 
 
 
