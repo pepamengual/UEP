@@ -1,10 +1,11 @@
-def scoring_with_multiprocessing(radius, number_of_processors, training_data, path_skempi_models):
+def scoring_with_multiprocessing(radius, number_of_processors, training_data):
     from multiprocessing import Pool
     from predictor.core import environment_scoring
     import glob
 
     skempi_predictions = {}
-
+    
+    path_skempi_models = "skempi/foldx_wildtype_models/WT_*"
     pool = Pool(processes=number_of_processors)
     multiple_results = []
 
