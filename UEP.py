@@ -5,6 +5,8 @@ from predictor.general import pickle_saver
 from predictor.general import pickle_reader
 from predictor.core import scoring
 from predictor.general import results_saver
+from predictor.core import scan_file
+from predictor.general import save
 
 HELP = " \
 Command:\n \
@@ -19,14 +21,14 @@ def parse_args():
     parser.add_argument('--radius', type=int, help='PPI interface radius', default=4)
     parser.add_argument('--model', type=str, help='Path of a UEP pre-trained model', default='trained_model/UEP_trained_model')
     parser.add_argument('--skempi', help='Re-run skempi results', action='store_true')
-    parser.add_argument('--scan', type=str, help='Scan the entire interface of a given PDB file', default="")
+    parser.add_argument('--scan', type=str, help='Scan the entire interface of a given PDB file. A .csv file will be generated', default="")
     args = parser.parse_args()
     return args.cpu, args.radius, args.model, args.skempi, args.scan
 
 def main(number_of_processors=27, radius=4, path_trained_model="trained_model/UEP_trained_model", skempi=False, scan=""):
     path_training_folders="/home/pepamengual/UEPPi/ueppi_script/training/all_complexes/interactome_*"
     
-    if skempi is False and scan == "":
+    if not skempi and scan == "":
         raise ValueError("Please, re-run UEP.py using --skempi or --scan arguments")
     else:
         path_trained_model = "{}_4".format(path_trained_model)
@@ -37,14 +39,15 @@ def main(number_of_processors=27, radius=4, path_trained_model="trained_model/UE
             training_data = training.training_with_multiprocessing(radius, number_of_processors, path_training_folders)
             pickle_saver.saving_pickle(training_data, path_trained_model)
         
-        if skempi is True and scan == "":
-            print("Here")
+        if skempi and scan == "":
+            print("Running skempi benchmark using {} cpus...".format(number_of_processors))
             skempi_predictions = scoring.scoring_with_multiprocessing(radius, number_of_processors, training_data)
             uep_results_file = "skempi/uep_predictions.txt"
             results_saver.saving_file(skempi_predictions, uep_results_file)
-    
-    #if skempi is False and scan != "":
-        ### SCAN
+        
+        if not skempi and scan != "":
+            ratio_dict = scan_file.scan_interface(scan, training_data)         
+            save.save_file(ratio_dict, scan)
 
 if __name__ == "__main__":
     cpu, radius, model, skempi, scan = parse_args()
