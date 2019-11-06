@@ -21,11 +21,11 @@ UEP is a tool for predicting the impact of mutations in a protein-protein comple
 1. Clone UEP repository in your computer.
 2. Want to re-run skempi benchmark? We filtered out (i) mutations to alanine (often are deleterious) ands (ii) binding affinity changes lower than 25%.
 ```
-python3 --skempi
+python3 UEP.py --skempi
 ```
 3. Want to select best predicted UEP variants of your PDB file? Just run the code below and a .csv file will be generated containing the improving predicted mutations of your PPI!
 ```
-python3 --scan PDB.pdb
+python3 UEP.py --scan PDB.pdb
 ```
 
 ### What makes UEP different from the state-of-the art?
