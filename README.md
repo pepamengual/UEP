@@ -7,6 +7,7 @@ UEP is a tool for predicting the impact of mutations in a protein-protein comple
 
 ### UEP dependencies
 
+- [argparse](https://docs.python.org/3/library/argparse.html) - user inputs
 - [prody](https://github.com/prody/ProDy) - three-dimensional searches
 - [itertools](https://docs.python.org/3/library/itertools.html) - combinatorial calculations
 - [glob](https://docs.python.org/3/library/glob.html) - pathing files
