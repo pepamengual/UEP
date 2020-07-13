@@ -30,11 +30,14 @@ python3 UEP.py --pdb=PDB.pdb --interface=A,BC
 Current state-of-the art methods for predicting the impact of mutations in a protein-protein complex rely on the description of physical energies, statistical potentials, conservation, shape complementarity, and more recently, machine learning-based approaches.
 
 UEP moves appart from the state-of-the art and it is based on the interactions observed in the interactome data (https://interactome3d.irbbarcelona.org/). It follows a three-body contact scheme of the highly-packed positions, where one residue of one protein must be in contact with at least two residues of the other protein. We have observed that such highly-packed positions exert larger differences in the experimental ΔΔG, and therefore they i) are easier to be predicted, and ii) they are more interesting for protein-protein design campaings.
-
-Once you run UEP, it will find the highly-packed residues of your PDB, and it will examine the contacts of your protein-protein interface. Then, it will predict a ΔΔG based on the wild type and the mutation counts observed in the interactome data, without the need of generating mutation files. This feature makes UEP really fast!
 </p>
 
 <p align="center">
 <img src="images/uep_scheme.png" width="400">
 </p>
+
+<p align="justify">
+Once you run UEP, it will find the highly-packed residues of your PDB, and it will examine the contacts of your protein-protein interface. Then, it will predict a ΔΔG based on the wild type and the mutation counts observed in the interactome data, without the need of generating mutation files. This feature makes UEP really fast!
+</p>
+
 
