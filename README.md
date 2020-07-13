@@ -2,7 +2,7 @@
 
 ### Welcome to UEP!
 <p align="justify">
-UEP is a tool for predicting the impact of mutations in a protein-protein complex. For a given PDB structure, it predicts automatically the effects of all possible mutations in the highly-packed interface positions in seconds. UEP predictions are competitive with the state-of-the art methods in the field with the advantage of being open-source code and extremelly fast in comparison!
+UEP is a tool for predicting the impact of mutations in a protein-protein complex. For a given PDB structure, it predicts automatically the effects of all possible mutations in the highly-packed interface positions. UEP predictions are competitive with the state-of-the art methods in the field with the advantage of being open-source code and extremelly fast in comparison, since it will take less than a second!
 </p>
 
 ### UEP dependencies
