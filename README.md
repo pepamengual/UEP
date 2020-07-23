@@ -31,8 +31,8 @@ python3 UEP.py --pdb=PDB.pdb --interface=A,BC
 3. Other columns represent mutations into the different residues.
 4. Numerical values represent the predicted ΔΔG.
 5. NaN values represent mutations that could not be scored because:
-  - Mutation is the same residue than the wild type.
-  - Mutation has less than 2 predicted contacts with the other chains.
+    - Mutation is the same residue than the wild type.
+    - Mutation has less than 2 predicted contacts with the other chains.
 6. Negative ΔΔG values are mutations predicted to improve the binding affinity of the PPI.
 7. Positive ΔΔG values are mutations predicted to decrease the binding affinity of the PPI.
 
