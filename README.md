@@ -24,6 +24,16 @@ python3 UEP.py --pdb=PDB.pdb --interface=A,BC
 ```
 3. Results will be displayed and saved (csv file) in the same folder than your PDB path.
 
+### Understanding UEP results
+
+1. Open the results file (csv file).
+2. First column represents analyzed positions on the highly packed interface.
+3. Other columns represent mutations into the different residues.
+4. Numerical values represent the predicted ΔΔG.
+5. NaN values are positions that could not be scored because: i) mutation is the same residue than the wild type, ii) mutation has less than 2 predicted contacts with the other chains.
+6. Negative ΔΔG values are mutations predicted to improve the binding affinity of the PPI.
+7. Positive ΔΔG values are mutations predicted to decrease the binding affinity of the PPI.
+
 ### What makes UEP different from the state-of-the art?
 
 <p align="justify">
