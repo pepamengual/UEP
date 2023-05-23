@@ -27,7 +27,7 @@ def main(pdb_path="", interface_chains=""):
     if not interface_chains or len(interface_chains.split(",")) != 2:
         raise ValueError("--> Please, define an interface chain following the scheme: Group1,Group2")
     
-    uep_contact_matrix = load("interactome_model/model.lzma", compression="lzma", set_default_extension=False)   
+    uep_contact_matrix = load(os.path.dirname(__file__)+"/interactome_model/model.lzma", compression="lzma", set_default_extension=False)
     uep_predictions = run_uep(pdb_path, interface_chains, uep_contact_matrix)
 
 if __name__ == "__main__":
